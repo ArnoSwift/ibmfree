@@ -363,7 +363,7 @@ run_deployment() {
         echo -e "${COLOR_MAGENTA}--- Clash 订阅链接 (通过 api.wcc.best) ---${COLOR_RESET}"
         RAW_VMESS_STRING=""; for i in "${!GENERATED_VMESS_LINKS_ARRAY[@]}"; do RAW_VMESS_STRING+="${GENERATED_VMESS_LINKS_ARRAY[$i]}"; if [ $i -lt $((${#GENERATED_VMESS_LINKS_ARRAY[@]} - 1)) ]; then RAW_VMESS_STRING+="|"; fi; done
         ENCODED_VMESS_STRING=$(echo -n "$RAW_VMESS_STRING" | jq -Rr @uri); CONFIG_URL_RAW="https://raw.githubusercontent.com/byJoey/test/refs/heads/main/tist.ini"; CONFIG_URL_ENCODED=$(echo -n "$CONFIG_URL_RAW" | jq -Rr @uri)
-        CLASH_API_BASE_URL="https://api.wcc.best/sub"; CLASH_API_PARAMS="target=clash&url=${ENCODED_VMESS_STRING}&insert=false&config=${CONFIG_URL_ENCODED}&emoji=false&list=false&tfo=false&scv=false&fdn=false&expand=false&sort=false&new_name=false"
+        CLASH_API_BASE_URL="https://api.wcc.best/sub"; CLASH_API_PARAMS="target=clash&url=${ENCODED_VMESS_STRING}&insert=true&config=${CONFIG_URL_ENCODED}&emoji=true&list=true&tfo=true&scv=true&fdn=true&expand=true&sort=true&new_name=true"
         FINAL_CLASH_API_URL="${CLASH_API_BASE_URL}?${CLASH_API_PARAMS}"; echo -e "${COLOR_GREEN}  ✓ Clash 订阅 URL:${COLOR_RESET}"; echo -e "    ${COLOR_WHITE_BOLD}${FINAL_CLASH_API_URL}${COLOR_RESET}"
       fi
     else echo -e "${COLOR_YELLOW}  没有可用的 VMess 链接来生成 Clash 订阅。${COLOR_RESET}"; fi; echo
