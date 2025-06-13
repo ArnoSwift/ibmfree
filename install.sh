@@ -1,13 +1,3 @@
-#!/bin/bash
-
-# Author: Joey
-# Blog: joeyblog.net
-# Feedback TG (Feedback Telegram): https://t.me/+ft-zI76oovgwNmRh
-# Core Functionality By:
-#   - https://github.com/eooce (老王)
-# Version: 2.4.8.sh (macOS - sed delimiter, panel URL opening with https default) - Modified by User Request
-# Modification: Updated Nezha config parser to support v0 and v1 command formats.
-
 # --- Color Definitions ---
 COLOR_RED='\033[0;31m'
 COLOR_GREEN='\033[0;32m'
@@ -35,14 +25,14 @@ print_header() {
 }
 
 # --- Welcome Message ---
-print_header "欢迎使用 IBM-sb-ws 增强配置脚本" "${COLOR_GREEN}" 
-echo -e "${COLOR_GREEN}  此脚本由 ${COLOR_WHITE_BOLD}Joey (joeyblog.net)${COLOR_GREEN} 维护和增强。${COLOR_RESET}"
-echo -e "${COLOR_GREEN}  核心功能由 ${COLOR_WHITE_BOLD}老王 (github.com/eooce)${COLOR_GREEN} 实现。${COLOR_RESET}"
+print_header "IBM-sb-ws " "${COLOR_GREEN}" 
+echo -e "${COLOR_GREEN}   ${COLOR_WHITE_BOLD}${COLOR_GREEN} 。${COLOR_RESET}"
+echo -e "${COLOR_GREEN}   ${COLOR_WHITE_BOLD}${COLOR_GREEN} 。${COLOR_RESET}"
 echo
-echo -e "${COLOR_GREEN}  如果您对 ${COLOR_WHITE_BOLD}此增强脚本${COLOR_GREEN} 有任何反馈，请通过 Telegram 联系 Joey:${COLOR_RESET}"
-echo -e "${COLOR_GREEN}    Joey's Feedback TG: ${COLOR_WHITE_BOLD}https://t.me/+ft-zI76oovgwNmRh${COLOR_RESET}"
+echo -e "${COLOR_GREEN}   ${COLOR_WHITE_BOLD}${COLOR_GREEN} ${COLOR_RESET}"
+echo -e "${COLOR_GREEN}   ${COLOR_WHITE_BOLD}${COLOR_RESET}"
 print_separator
-echo -e "${COLOR_GREEN}>>> 小白用户建议直接一路回车，使用默认配置快速完成部署 <<<${COLOR_RESET}" 
+echo -e "${COLOR_GREEN}>>>b <<<${COLOR_RESET}" 
 echo
 
 # --- 读取用户输入的函数 ---
